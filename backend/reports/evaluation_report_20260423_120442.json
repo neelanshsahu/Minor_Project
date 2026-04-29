@@ -1,0 +1,196 @@
+{
+  "benchmarks": {
+    "secret_sharing": {
+      "operation": "secret_sharing",
+      "data": [
+        {
+          "num_parties": 3,
+          "threshold": 2,
+          "avg_split_time_ms": 0.008,
+          "avg_reconstruct_time_ms": 0.041,
+          "std_split_time_ms": 0.004,
+          "std_reconstruct_time_ms": 0.009
+        },
+        {
+          "num_parties": 4,
+          "threshold": 2,
+          "avg_split_time_ms": 0.009,
+          "avg_reconstruct_time_ms": 0.04,
+          "std_split_time_ms": 0.003,
+          "std_reconstruct_time_ms": 0.007
+        },
+        {
+          "num_parties": 5,
+          "threshold": 3,
+          "avg_split_time_ms": 0.014,
+          "avg_reconstruct_time_ms": 0.086,
+          "std_split_time_ms": 0.008,
+          "std_reconstruct_time_ms": 0.004
+        },
+        {
+          "num_parties": 6,
+          "threshold": 3,
+          "avg_split_time_ms": 0.014,
+          "avg_reconstruct_time_ms": 0.113,
+          "std_split_time_ms": 0.004,
+          "std_reconstruct_time_ms": 0.043
+        },
+        {
+          "num_parties": 7,
+          "threshold": 4,
+          "avg_split_time_ms": 0.017,
+          "avg_reconstruct_time_ms": 0.221,
+          "std_split_time_ms": 0.001,
+          "std_reconstruct_time_ms": 0.004
+        },
+        {
+          "num_parties": 8,
+          "threshold": 4,
+          "avg_split_time_ms": 0.017,
+          "avg_reconstruct_time_ms": 0.225,
+          "std_split_time_ms": 0.002,
+          "std_reconstruct_time_ms": 0.029
+        },
+        {
+          "num_parties": 9,
+          "threshold": 5,
+          "avg_split_time_ms": 0.021,
+          "avg_reconstruct_time_ms": 0.292,
+          "std_split_time_ms": 0.001,
+          "std_reconstruct_time_ms": 0.009
+        },
+        {
+          "num_parties": 10,
+          "threshold": 6,
+          "avg_split_time_ms": 0.023,
+          "avg_reconstruct_time_ms": 0.344,
+          "std_split_time_ms": 0.001,
+          "std_reconstruct_time_ms": 0.029
+        }
+      ]
+    },
+    "secure_aggregation": {
+      "operation": "secure_aggregation",
+      "data": [
+        {
+          "num_parties": 3,
+          "total_values": 30,
+          "threshold": 2,
+          "avg_sum_time_ms": 0.06,
+          "avg_average_time_ms": 0.056
+        },
+        {
+          "num_parties": 5,
+          "total_values": 50,
+          "threshold": 3,
+          "avg_sum_time_ms": 0.09,
+          "avg_average_time_ms": 0.092
+        },
+        {
+          "num_parties": 7,
+          "total_values": 70,
+          "threshold": 4,
+          "avg_sum_time_ms": 0.255,
+          "avg_average_time_ms": 0.228
+        },
+        {
+          "num_parties": 10,
+          "total_values": 100,
+          "threshold": 6,
+          "avg_sum_time_ms": 0.383,
+          "avg_average_time_ms": 0.387
+        }
+      ]
+    },
+    "garbled_circuits": {
+      "operation": "garbled_circuits",
+      "data": [
+        {
+          "bit_width": 4,
+          "avg_create_time_ms": 0.043,
+          "avg_eval_time_ms": 0.009,
+          "avg_compare_time_ms": 0.152,
+          "num_gates_for_compare": 4
+        },
+        {
+          "bit_width": 8,
+          "avg_create_time_ms": 0.026,
+          "avg_eval_time_ms": 0.009,
+          "avg_compare_time_ms": 0.296,
+          "num_gates_for_compare": 8
+        },
+        {
+          "bit_width": 12,
+          "avg_create_time_ms": 0.025,
+          "avg_eval_time_ms": 0.009,
+          "avg_compare_time_ms": 0.396,
+          "num_gates_for_compare": 12
+        },
+        {
+          "bit_width": 16,
+          "avg_create_time_ms": 0.024,
+          "avg_eval_time_ms": 0.01,
+          "avg_compare_time_ms": 0.508,
+          "num_gates_for_compare": 16
+        }
+      ]
+    },
+    "homomorphic_encryption": {
+      "operation": "homomorphic_encryption",
+      "data": [
+        {
+          "vector_size": 10,
+          "using_tenseal": false,
+          "avg_encrypt_time_ms": 0.007,
+          "avg_add_time_ms": 0.007,
+          "avg_decrypt_time_ms": 0.008
+        },
+        {
+          "vector_size": 50,
+          "using_tenseal": false,
+          "avg_encrypt_time_ms": 0.006,
+          "avg_add_time_ms": 0.006,
+          "avg_decrypt_time_ms": 0.019
+        },
+        {
+          "vector_size": 100,
+          "using_tenseal": false,
+          "avg_encrypt_time_ms": 0.008,
+          "avg_add_time_ms": 0.008,
+          "avg_decrypt_time_ms": 0.038
+        }
+      ]
+    },
+    "zero_knowledge_proofs": {
+      "operation": "zero_knowledge_proofs",
+      "data": [
+        {
+          "proof_type": "range",
+          "avg_generation_time_ms": 14.893,
+          "avg_verification_time_ms": 9.598
+        },
+        {
+          "proof_type": "threshold",
+          "avg_generation_time_ms": 8.975,
+          "avg_verification_time_ms": 4.78
+        },
+        {
+          "proof_type": "membership",
+          "avg_generation_time_ms": 7.047,
+          "avg_verification_time_ms": 4.596
+        }
+      ]
+    }
+  },
+  "security_metrics": {
+    "avg_share_entropy": 6.025,
+    "min_share_entropy": 5.9436,
+    "max_share_entropy": 6.1219,
+    "reconstruction_accuracy": 1.0,
+    "max_reconstruction_error": 0,
+    "information_theoretic_security": true,
+    "threshold_security": "Any 2 or fewer shares reveal NO information about the secret"
+  },
+  "total_benchmark_time_seconds": 0.54,
+  "timestamp": "2026-04-23T12:04:42Z"
+}
